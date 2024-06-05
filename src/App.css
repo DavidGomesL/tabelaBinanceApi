@@ -1,0 +1,14 @@
+.body{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+}
+.body table{
+    width: 100%;
+}
+.body tr{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin-top: 4px;
+}
