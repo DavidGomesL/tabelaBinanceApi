@@ -1,6 +1,7 @@
 import './App.css'
 import { useEffect, useState } from 'react' //Importa os hook's para uso no código
 import Table from 'react-bootstrap/Table'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -25,8 +26,9 @@ function App() {
   return (
     <>
       <div className='body'>
-        <table>
-          <thead>
+        <h1 className='titleTable'>Tabela Binance</h1>
+        <Table striped>
+          <thead className='thead'>
             <tr>
               <th>Horário de Abertura</th>
               <th>Valor de Abertura</th>
@@ -48,7 +50,7 @@ function App() {
                   {/*consome nas td's os index informados vinculando ao parametro item que está sendo declarado*/}
                   <td>{item[1]}</td>
                   <td>{item[2]}</td>
-                  <td>{item[3]}</td>
+                  <td className='valorMin'>{item[3]}</td>
                   <td>{item[4]}</td>
                   <td>{new Date(item[6]).toLocaleString()}</td>
                 </tr>
@@ -56,7 +58,7 @@ function App() {
             }
           })}
           </tbody>
-        </table>
+        </Table>
       </div>
     </>
   )
